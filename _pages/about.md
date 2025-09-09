@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: PhD in Robot Learning | University of Edinburgh | Honda Research Institute Europe
 
