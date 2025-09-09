@@ -1,6 +1,6 @@
 ---
 layout: cv
-permalink: example_pdf.pdf
+permalink: CV_2025.pdf
 title: CV
 nav: true
 nav_order: 5
