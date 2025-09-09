@@ -391,8 +391,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather.html";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-our-paper-learning-deep-dynamical-systems-using-stable-neural-odes-has-been-accepted-at-the-ieee-rsj-international-conference-on-intelligent-robots-and-systems-2024",
+          title: 'Our paper, Learning Deep Dynamical Systems using Stable Neural ODEs, has been accepted...',
+          description: "",
+          section: "News",},{id: "news-thrilled-to-announce-that-i-will-be-spending-this-july-as-a-visiting-phd-in-the-university-of-tokyo-feel-free-to-reach-out-if-you-re-in-tokyo",
+          title: 'Thrilled to announce that I will be spending this July as a visiting...',
+          description: "",
+          section: "News",},{id: "news-our-paper-fast-flow-based-visuomotor-policies-via-conditional-optimal-transport-couplings-has-been-accepted-at-the-conference-on-robot-learning-corl-2025",
+          title: 'Our paper, Fast Flow-based Visuomotor Policies via Conditional Optimal Transport Couplings, has been...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
