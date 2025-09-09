@@ -10,7 +10,7 @@ contact_note: >
   Feel free to reach out at a [dot] sochopoulos [at] ed [dot] ac [dot] uk
 description: # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text:
-keywords:  # add your own keywords or leave empty
+keywords: # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -82,8 +82,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name:  # blog_name will be displayed in your blog page
-blog_description: 
+blog_name: # blog_name will be displayed in your blog page
+blog_description:
 permalink:
 lsi: false # produce an index for related posts
 
