@@ -7,7 +7,7 @@ subtitle: PhD in Robot Learning | University of Edinburgh | Honda Research Insti
 profile:
   align: right
   image: profile_pic.jpeg
-  image_circular: True # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -29,7 +29,3 @@ Hello! My name is Andreas, and I am currently a PhD student at the University of
 My research focuses on imitation learning using continuous-time generative models, such as diffusion and flow models. So far, I have worked on accelerating the inference of flow models for action generation without additional training overhead, as well as on guaranteeing constrained solutions for neural ODEs. I am particularly interested in ways to make diffusion/flow-based policies *safe*, *fast*, and *robust* when training with limited demonstrations.  
 
 I am currently exploring the use of diffusion samplers to achieve these goals. If you are interested in my research or would like to discuss related topics, feel free to reach out!
-
-
-
-

@@ -4,10 +4,10 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Andreas
-middle_name: 
+middle_name:
 last_name: Sochopoulos
 contact_note: >
-  Feel free to reach out in a [dot] sochopoulos [at] ed [dot] ac [dot] uk
+  Feel free to reach out at a [dot] sochopoulos [at] ed [dot] ac [dot] uk
 description: # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text:
 keywords:  # add your own keywords or leave empty
