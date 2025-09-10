@@ -391,7 +391,7 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather.html";
-            },},{id: "news-our-paper-learning-deep-dynamical-systems-using-stable-neural-odes-has-been-accepted-at-the-ieee-rsj-international-conference-on-intelligent-robots-and-systems-2024",
+            },},{id: "news-our-paper-learning-deep-dynamical-systems-using-stable-neural-odes-has-been-accepted-at-the-ieee-rsj-international-conference-on-intelligent-robots-and-systems-iros-2024",
           title: 'Our paper, Learning Deep Dynamical Systems using Stable Neural ODEs, has been accepted...',
           description: "",
           section: "News",},{id: "news-thrilled-to-announce-that-i-will-be-spending-this-july-as-a-visiting-phd-in-the-university-of-tokyo-feel-free-to-reach-out-if-you-re-in-tokyo",
