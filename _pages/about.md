@@ -26,6 +26,6 @@ latest_posts:
 
 Hello! My name is Andreas, and I am currently a PhD student at the University of Edinburgh (UoE), supported by Honda Research Institute Europe (HRI-EU), and advised by [Sethu Vijayakumar](https://homepages.inf.ed.ac.uk/svijayak/) (UoE), [Michael Gienger](https://scholar.google.com/citations?user=oU2jyxMAAAAJ&hl=de) (HRI-EU), and [Nikolay Malkin](https://malkin1729.github.io/) (UoE).
 
-My research focuses on imitation learning using continuous-time generative models, such as diffusion and flow models. So far, I have worked on accelerating the inference of flow models for action generation without additional training overhead, as well as on guaranteeing constrained solutions for neural ODEs. I am particularly interested in ways to make diffusion/flow-based policies _safe_, _fast_, and _robust_ when training with limited demonstrations.
+My research focuses on imitation learning using continuous-time generative models, such as diffusion and flow models. So far, I have worked on accelerating the inference of flow models for action generation without additional training overhead, as well as on guaranteeing constrained solutions for neural ODEs. I am particularly interested in ways to make diffusion/flow-based policies _force-aware_, _fast_, and _robust_ when training with limited demonstrations.
 
-I am currently exploring the use of diffusion samplers to achieve these goals. If you are interested in my research or would like to discuss related topics, feel free to reach out!
+I am currently exploring adaptive compliance-based VLA post-training using offline RL. If you are interested in my research or would like to discuss related topics, feel free to reach out!
