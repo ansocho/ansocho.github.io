@@ -17,11 +17,13 @@ layout: default
   <article>
     {% if page.profile %}
       <!-- ADDED: inline style to force the width smaller (max-width: 200px) and center the contents -->
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}" style="max-width: 200px; text-align: center; margin-left: 2rem;">
+      <div
+        class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}"
+        style="max-width: 200px; text-align: center; margin-left: 2rem;"
+      >
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          
-          
+
           {% capture sizes %}(min-width: {{ site.max_width }}) 200px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {%
@@ -29,7 +31,7 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
-        
+
         {% if page.profile.more_info %}
           <div class="more-info" style="margin-top: 15px;">{{ page.profile.more_info }}</div>
         {% endif %}
