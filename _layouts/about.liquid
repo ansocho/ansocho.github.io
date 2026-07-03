@@ -16,32 +16,27 @@ layout: default
 
   <article>
     {% if page.profile %}
-      <!-- Added inline styles to shrink the image and center the contents -->
-      <div
-        class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}"
-        style="width: 22%; min-width: 180px; text-align: center;"
-      >
+      <!-- ADDED: inline style to force the width smaller (max-width: 200px) and center the contents -->
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}" style="max-width: 200px; text-align: center; margin-left: 2rem;">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-
-          <!-- Forced the image to be square with slightly rounded corners -->
-          {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+          
+          
+          {% capture sizes %}(min-width: {{ site.max_width }}) 200px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {%
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
           %}
         {% endif %}
-
+        
         {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          <div class="more-info" style="margin-top: 15px;">{{ page.profile.more_info }}</div>
         {% endif %}
 
-        <!-- Moved Social links here, directly under the image -->
+        <!-- MOVED: Social icons nested right under the profile picture -->
         {% if page.social %}
-          <div class="social mt-3">
+          <div class="social mt-4">
             <div class="contact-icons">{% include social.liquid %}</div>
             <div class="contact-note" style="font-size: 0.8rem; margin-top: 0.5rem;">{{ site.contact_note }}</div>
           </div>
