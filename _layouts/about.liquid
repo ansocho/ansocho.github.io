@@ -17,13 +17,16 @@ layout: default
   <article>
     {% if page.profile %}
       <!-- Added inline styles to shrink the image and center the contents -->
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}" style="width: 22%; min-width: 180px; text-align: center;">
+      <div
+        class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}"
+        style="width: 22%; min-width: 180px; text-align: center;"
+      >
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          
+
           <!-- Forced the image to be square with slightly rounded corners -->
           {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-          
+
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {%
@@ -31,7 +34,7 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
-        
+
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
