@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello! My name is Andreas, and I am currently a PhD student at the University of Edinburgh (UoE), supported by Honda Research Institute Europe (HRI-EU), and advised by [Sethu Vijayakumar](https://homepages.inf.ed.ac.uk/svijayak/) (UoE), [Michael Gienger](https://scholar.google.com/citations?user=oU2jyxMAAAAJ&hl=de) (HRI-EU).
+I am currently a PhD student at the University of Edinburgh (UoE), supported by Honda Research Institute Europe (HRI-EU), and advised by [Sethu Vijayakumar](https://homepages.inf.ed.ac.uk/svijayak/) (UoE), [Michael Gienger](https://scholar.google.com/citations?user=oU2jyxMAAAAJ&hl=de) (HRI-EU).
 
 My research focuses on imitation learning using continuous-time generative models, such as diffusion and flow models. So far, I have worked on accelerating the inference of flow models for action generation without additional training overhead and efficient RL post-training . I am particularly interested in ways to make diffusion/flow-based policies _force-aware_, _fast_, and training/adapting them with as few demonstrations as possible.
 
