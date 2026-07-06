@@ -85,20 +85,21 @@ layout: default
   .profile-section {
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-bottom: 1rem;
   }
 
   .profile-sidebar {
-    flex: 0 0 220px;
+    flex: 0 0 170px;
+    max-width: 170px;
     display: flex;
     flex-direction: column;
   }
 
-  /* Taller, more portrait-shaped image */
+  /* Smaller, portrait-shaped image */
   .profile-sidebar .profile-portrait {
     width: 100%;
-    height: 300px;
+    height: 190px;
     object-fit: cover;
     object-position: top center;
   }
@@ -109,21 +110,37 @@ layout: default
   }
 
   .sidebar-social {
-    margin-top: 1rem;
+    margin-top: 0.6rem;
     width: 100%;
     text-align: center;
   }
 
+  /* Force icons onto a single line and shrink them to fit the sidebar width */
   .sidebar-social .contact-icons {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: nowrap !important;
     justify-content: center;
-    gap: 0.6rem;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .sidebar-social .contact-icons a {
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .sidebar-social .contact-icons i,
+  .sidebar-social .contact-icons svg {
+    font-size: 1.1rem !important;
+    width: 1.1rem !important;
+    height: 1.1rem !important;
   }
 
   .sidebar-social .contact-note {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    font-size: 0.72rem;
+    line-height: 1.25;
   }
 
   /* Stack into a single column on small screens */
@@ -134,7 +151,7 @@ layout: default
     .profile-sidebar {
       flex: 0 0 auto;
       width: 100%;
-      max-width: 220px;
+      max-width: 170px;
       margin: 0 auto 1.5rem auto;
     }
   }
