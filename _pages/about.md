@@ -29,4 +29,4 @@ I am currently a PhD student at the University of Edinburgh (UoE), supported by 
 
 My research focuses on imitation learning using continuous-time generative models, such as diffusion and flow models. So far, I have worked on accelerating the inference of flow models for action generation without additional training overhead and efficient RL post-training . I am particularly interested in ways to make diffusion/flow-based policies _force-aware_, _fast_, and training/adapting them with as few demonstrations as possible.
 
-I am currently exploring demonstration-efficient VLA steering. If you are interested in my research or would like to discuss related topics, feel free to reach out!
+I am currently exploring various aspects of demonstration-efficient VLA post-training. If you are interested in my research or would like to discuss related topics, feel free to reach out!
