@@ -5,6 +5,6 @@ title: "CV"
 description:
 nav: true
 nav_order: 5
-redirect: https://ansocho.github.io/assets/pdf/CV_2026_AS.pdf
+redirect: https://ansocho.github.io/assets/pdf/CV_AS.pdf
 redirect_immediately: true
 ---
