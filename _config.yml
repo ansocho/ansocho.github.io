@@ -34,6 +34,9 @@ google_analytics: G-R86WDB5YN5
 
 # Build settings --------------------------------------------------------------
 markdown: kramdown
+# GitHub Pages enables the jekyll-theme-primer theme by default; its
+# assets/css/style.css would clash with ours, so switch it off.
+theme: null
 permalink: pretty
 
 plugins:

@@ -5,7 +5,7 @@
 <meta name="color-scheme" content="light dark">
 <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script>
   // Apply a saved light/dark choice before first paint; otherwise follow the OS.
   try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
