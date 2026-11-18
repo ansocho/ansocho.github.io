@@ -1,0 +1,12 @@
+{%- assign news = site.data.news | sort: "date" | reverse -%}
+{%- assign n = include.limit | default: news.size -%}
+<div class="news{% if include.limit and news.size > 3 %} news-scroll{% endif %}">
+  <table>
+    {%- for item in news limit: n %}
+    <tr>
+      <th scope="row"><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%b %Y" }}</time></th>
+      <td>{{ item.text }}</td>
+    </tr>
+    {%- endfor %}
+  </table>
+</div>

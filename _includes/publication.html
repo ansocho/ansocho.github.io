@@ -1,0 +1,30 @@
+{%- assign p = include.pub -%}
+<article class="pub">
+  <div class="pub-thumb">
+    {%- if p.preview -%}
+      {%- assign src = p.preview | prepend: "/assets/img/publication_preview/" | relative_url -%}
+      {%- if p.preview contains ".mp4" -%}
+        {%- assign poster = src | replace: ".mp4", ".jpg" %}
+    <video src="{{ src }}" poster="{{ poster }}" autoplay muted loop playsinline preload="none" aria-label="{{ p.title | escape }}"></video>
+      {%- else %}
+    <img src="{{ src }}" alt="{{ p.title | escape }}" loading="lazy">
+      {%- endif -%}
+    {%- endif %}
+  </div>
+  <div class="pub-body">
+    <h3 class="pub-title">{{ p.title }}{% if p.highlight %} <mark>{{ p.highlight }}</mark>{% endif %}</h3>
+    <div class="pub-authors">
+      {%- for a in p.authors -%}
+        {%- if a == site.author.name %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}
+    </div>
+    <div class="pub-venue"><em>{{ p.venue }}</em>, {{ p.year }}</div>
+    <div class="pub-links">
+      {%- if p.arxiv %}<a class="btn" href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv</a>{% endif %}
+      {%- if p.pdf %}<a class="btn" href="{{ p.pdf | relative_url }}">PDF</a>{% endif %}
+      {%- if p.website %}<a class="btn" href="{{ p.website }}">Website</a>{% endif %}
+      {%- if p.code %}<a class="btn" href="{{ p.code }}">Code</a>{% endif %}
+      {%- if p.bibtex %}<details class="bibtex"><summary class="btn">BibTeX</summary><pre><code>{{ p.bibtex | strip | escape }}</code></pre></details>{% endif %}
+    </div>
+  </div>
+</article>

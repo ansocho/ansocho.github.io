@@ -1,0 +1,20 @@
+# Newest first. `text` may contain inline HTML.
+- date: 2026-11-23
+  text: >-
+    Our paper, <a href="https://ansocho.github.io/otql-flow/">Optimal Transport Q-Learning for Flow Policy Steering and Acceleration</a>,
+    has been accepted at the Conference on Robot Learning (CoRL), 2026!
+
+- date: 2025-08-01
+  text: >-
+    Our paper, <a href="https://ansocho.github.io/cot-policy/">Fast Flow-based Visuomotor Policies via Conditional Optimal Transport Couplings</a>,
+    has been accepted at the Conference on Robot Learning (CoRL), 2025!
+
+- date: 2025-07-01
+  text: >-
+    Thrilled to announce that I will be spending this July as a visiting PhD in the University of Tokyo.
+    Feel free to reach out if you're in Tokyo.
+
+- date: 2024-06-01
+  text: >-
+    Our paper, <a href="https://arxiv.org/abs/2404.10622">Learning Deep Dynamical Systems using Stable Neural ODEs</a>,
+    has been accepted at the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024!

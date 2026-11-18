@@ -1,0 +1,27 @@
+{%- assign s = site.data.socials -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": {{ "/#person" | absolute_url | jsonify }},
+  "name": {{ site.author.name | jsonify }},
+  "givenName": "Andreas",
+  "familyName": "Sochopoulos",
+  "url": {{ "/" | absolute_url | jsonify }},
+  "image": {{ "/assets/img/profile_pic.jpeg" | absolute_url | jsonify }},
+  "jobTitle": "PhD Student",
+  "description": {{ site.description | jsonify }},
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Edinburgh",
+    "url": "https://www.ed.ac.uk/"
+  },
+  "memberOf": {
+    "@type": "ResearchOrganization",
+    "name": "Honda Research Institute Europe",
+    "url": "https://www.honda-ri.de/"
+  },
+  "knowsAbout": ["Robot learning", "Imitation learning", "Diffusion models", "Flow matching", "Reinforcement learning"],
+  "sameAs": {{ site.social.links | jsonify }}
+}
+</script>

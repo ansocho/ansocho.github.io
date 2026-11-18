@@ -1,0 +1,126 @@
+# Publications, newest first.
+#
+# Fields (all optional except title/authors/venue/year):
+#   authors:   list of names; the one matching site.author.name is rendered bold
+#   highlight: short badge shown after the title, e.g. "Oral"
+#   selected:  true to show on the homepage
+#   preview:   file in assets/img/publication_preview/ (.mp4 uses the .jpg with
+#              the same name as poster frame; .gif/.png/.jpg are shown as images)
+#   arxiv:     arXiv ID      website: project page      code: repository
+#   pdf:       link to a PDF bibtex:  BibTeX entry (shown in an expandable box)
+
+- title: Optimal Transport Q-Learning for Flow Policy Steering and Acceleration
+  authors: [Andreas Sochopoulos, Esmeralda S. Whitammer, Nikolaos Tsagkas, João Moura, Michael Gienger, Sethu Vijayakumar]
+  venue: arXiv preprint
+  year: 2026
+  selected: true
+  preview: otql_thumbnail.mp4
+  arxiv: "2607.06262"
+  website: https://ansocho.github.io/otql-flow/
+  bibtex: |
+    @article{sochopoulos2026otql,
+      title   = {Optimal Transport Q-Learning for Flow Policy Steering and Acceleration},
+      author  = {Sochopoulos, Andreas and Whitammer, Esmeralda S. and Tsagkas, Nikolaos and Moura, Jo{\~a}o and Gienger, Michael and Vijayakumar, Sethu},
+      journal = {arXiv preprint arXiv:2607.06262},
+      year    = {2026}
+    }
+
+- title: Decoupling the Declarative from the Procedural in Vision-Language-Action Models
+  authors: [Nikolaos Tsagkas, Andreas Sochopoulos, Chris Xiaoxuan Lu, Oisin Mac Aodha, Alexandros Kouris]
+  venue: arXiv preprint
+  year: 2026
+  selected: true
+  preview: w2vla_thumbnail.mp4
+  arxiv: "2606.21496"
+  website: https://tsagkas.github.io/w2vla/index.html
+  bibtex: |
+    @article{tsagkas2026w2vla,
+      title   = {Decoupling the Declarative from the Procedural in Vision-Language-Action Models},
+      author  = {Tsagkas, Nikolaos and Sochopoulos, Andreas and Lu, Chris Xiaoxuan and Mac Aodha, Oisin and Kouris, Alexandros},
+      journal = {arXiv preprint arXiv:2606.21496},
+      year    = {2026}
+    }
+
+- title: "Attentive Feature Aggregation, Or: How Policies Learn to Stop Worrying about Robustness and Attend to Task-Relevant Visual Cues"
+  authors: [Nikolaos Tsagkas, Andreas Sochopoulos, Duolikun Danier, Sethu Vijayakumar, Alexandros Kouris, Oisin Mac Aodha]
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Pittsburgh, USA
+  year: 2026
+  selected: true
+  preview: afa_thumbnail_smaller.mp4
+  arxiv: "2511.10762"
+  website: https://tsagkas.github.io/afa/index.html
+  code: https://github.com/tsagkas/pvrobo
+  bibtex: |
+    @inproceedings{tsagkas2026afa,
+      title     = {Attentive Feature Aggregation, Or: How Policies Learn to Stop Worrying about Robustness and Attend to Task-Relevant Visual Cues},
+      author    = {Tsagkas, Nikolaos and Sochopoulos, Andreas and Danier, Duolikun and Vijayakumar, Sethu and Kouris, Alexandros and Mac Aodha, Oisin},
+      booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+      year      = {2026}
+    }
+
+- title: "The Temporal Trap: Entanglement in Pre-Trained Visual Representations for Visuomotor Policy Learning"
+  authors: [Nikolaos Tsagkas, Andreas Sochopoulos, Duolikun Danier, Chris Xiaoxuan Lu, Oisin Mac Aodha]
+  venue: International Conference on Robotics and Automation (ICRA), Vienna, Austria
+  year: 2026
+  selected: true
+  preview: temporal_thumbnail.mp4
+  arxiv: "2502.03270"
+  website: https://tsagkas.github.io/te/index.html
+  code: https://github.com/tsagkas/pvrobo
+  bibtex: |
+    @inproceedings{tsagkas2026temporal,
+      title     = {The Temporal Trap: Entanglement in Pre-Trained Visual Representations for Visuomotor Policy Learning},
+      author    = {Tsagkas, Nikolaos and Sochopoulos, Andreas and Danier, Duolikun and Lu, Chris Xiaoxuan and Mac Aodha, Oisin},
+      booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+      year      = {2026}
+    }
+
+- title: Fast Flow-based Visuomotor Policies via Conditional Optimal Transport Couplings
+  authors: [Andreas Sochopoulos, Nikolay Malkin, Nikolaos Tsagkas, João Moura, Michael Gienger, Sethu Vijayakumar]
+  venue: Conference on Robot Learning (CoRL), Seoul, South Korea
+  year: 2025
+  selected: true
+  preview: zipper_16fps_240.mp4
+  arxiv: "2505.01179"
+  website: https://ansocho.github.io/cot-policy/
+  code: https://github.com/ansocho/cot_policy
+  bibtex: |
+    @inproceedings{sochopoulos2025cotpolicy,
+      title     = {Fast Flow-based Visuomotor Policies via Conditional Optimal Transport Couplings},
+      author    = {Sochopoulos, Andreas and Malkin, Nikolay and Tsagkas, Nikolaos and Moura, Jo{\~a}o and Gienger, Michael and Vijayakumar, Sethu},
+      booktitle = {Conference on Robot Learning (CoRL)},
+      year      = {2025}
+    }
+
+- title: "When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning"
+  highlight: Oral EAI@CVPR25
+  authors: [Nikolaos Tsagkas, Andreas Sochopoulos, Duolikun Danier, Chris Xiaoxuan Lu, Oisin Mac Aodha]
+  venue: arXiv preprint
+  year: 2025
+  selected: true
+  preview: pvrobo_thumbnail_distractors_short.mp4
+  arxiv: "2502.03270"
+  website: https://tsagkas.github.io/pvrobo/
+  code: https://github.com/tsagkas/pvrobo
+  bibtex: |
+    @article{tsagkas2025pvrobo,
+      title   = {When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning},
+      author  = {Tsagkas, Nikolaos and Sochopoulos, Andreas and Danier, Duolikun and Lu, Chris Xiaoxuan and Mac Aodha, Oisin},
+      journal = {arXiv preprint arXiv:2502.03270},
+      year    = {2025}
+    }
+
+- title: Learning Deep Dynamical Systems using Stable Neural ODEs
+  authors: [Andreas Sochopoulos, Michael Gienger, Sethu Vijayakumar]
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+  year: 2024
+  selected: true
+  preview: stablenode.mp4
+  arxiv: "2404.10622"
+  bibtex: |
+    @inproceedings{sochopoulos2024learning,
+      title     = {Learning Deep Dynamical Systems using Stable Neural ODEs},
+      author    = {Sochopoulos, Andreas and Gienger, Michael and Vijayakumar, Sethu},
+      booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+      year      = {2024}
+    }

@@ -1,0 +1,185 @@
+/* ansocho.github.io: one plain stylesheet, light + dark themes. */
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #5f5f5f;
+  --accent: #871e1c;      /* links, active nav, button borders */
+  --accent-text: #871e1c; /* accent used for text (kept separate for contrast) */
+  --border: rgba(0, 0, 0, 0.1);
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --code-bg: #f6f6f6;
+  --mark: #fff3b0;
+  --max: 930px;
+  color-scheme: light;
+}
+
+/* Dark: used when the OS prefers dark (unless the visitor chose light), or when chosen. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1c1d;
+    --text: #e6e6e6;
+    --muted: #a3a3a3;
+    --accent: #4b71aa;
+    --accent-text: #7b9bd0;
+    --border: rgba(255, 255, 255, 0.12);
+    --header-bg: rgba(28, 28, 29, 0.92);
+    --code-bg: #2a2b2e;
+    --mark: #5a4b12;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1c1d;
+  --text: #e6e6e6;
+  --muted: #a3a3a3;
+  --accent: #4b71aa;
+  --accent-text: #7b9bd0;
+  --border: rgba(255, 255, 255, 0.12);
+  --header-bg: rgba(28, 28, 29, 0.92);
+  --code-bg: #2a2b2e;
+  --mark: #5a4b12;
+  color-scheme: dark;
+}
+
+/* Base ---------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main { flex: 1; padding-top: 2rem; padding-bottom: 3rem; }
+.container { max-width: var(--max); margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+
+a { color: var(--accent-text); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, summary:focus-visible, label:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+
+h1, h2, h3 { line-height: 1.25; font-weight: 600; }
+h1 { font-size: 2.6rem; font-weight: 300; margin: 0 0 0.25rem; }
+h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; }
+h2 a { color: inherit; }
+mark { background: var(--mark); color: inherit; padding: 0 0.2em; border-radius: 2px; }
+
+/* Header / nav --------------------------------------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--header-bg);
+  backdrop-filter: saturate(180%) blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 56px; flex-wrap: wrap; }
+.brand { color: var(--text); font-size: 1.15rem; font-weight: 300; }
+.brand strong { font-weight: 600; }
+.brand:hover { text-decoration: none; color: var(--accent-text); }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 0.25rem; margin: 0; padding: 0; }
+.nav-links a { color: var(--text); padding: 0.4rem 0.6rem; display: block; }
+.nav-links a:hover { color: var(--accent-text); text-decoration: none; }
+.nav-links a[aria-current="page"] { color: var(--accent-text); font-weight: 600; }
+
+.theme-toggle {
+  background: none; border: 0; padding: 0.4rem 0.6rem; cursor: pointer;
+  color: var(--text); display: flex; align-items: center;
+}
+.theme-toggle:hover { color: var(--accent-text); }
+.icon-sun { display: none; }
+:root[data-theme="dark"] .icon-sun { display: block; }
+:root[data-theme="dark"] .icon-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .icon-moon { display: none; }
+}
+
+/* CSS-only mobile menu */
+.nav-toggle { position: absolute; opacity: 0; pointer-events: none; }
+.nav-burger { display: none; cursor: pointer; padding: 0.6rem 0.25rem; }
+.nav-burger span, .nav-burger span::before, .nav-burger span::after {
+  display: block; width: 22px; height: 2px; background: var(--text); position: relative; content: "";
+}
+.nav-burger span::before { position: absolute; top: -7px; }
+.nav-burger span::after { position: absolute; top: 7px; }
+
+@media (max-width: 600px) {
+  .nav-burger { display: block; }
+  .nav-links { display: none; width: 100%; flex-direction: column; align-items: flex-start; padding-bottom: 0.5rem; }
+  .nav-toggle:checked ~ .nav-links { display: flex; }
+  .nav-toggle:focus-visible + .nav-burger { outline: 2px solid var(--accent); }
+  .nav-links a, .theme-toggle { padding-left: 0; }
+}
+
+/* About ---------------------------------------------------------------------- */
+.intro { margin-bottom: 1.5rem; }
+.subtitle { margin: 0; color: var(--muted); }
+.profile {
+  float: right;
+  width: 170px;
+  margin: 0.3rem 0 1rem 1.5rem;
+}
+.profile img {
+  display: block;
+  width: 170px; height: 190px;
+  object-fit: cover; object-position: top center;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+@media (max-width: 576px) {
+  .profile { float: none; margin: 0 auto 1.5rem; }
+}
+.socials { list-style: none; display: flex; justify-content: center; gap: 0.9rem; padding: 0; margin: 0.75rem 0 0; }
+.socials a { color: var(--text); display: block; }
+.socials a:hover { color: var(--accent-text); }
+.socials svg { width: 26px; height: 26px; display: block; }
+h2 { clear: both; }
+
+/* News ----------------------------------------------------------------------- */
+.news table { border-collapse: collapse; width: 100%; }
+.news th, .news td { text-align: left; vertical-align: top; padding: 0.3rem 0; }
+.news th { font-weight: 600; white-space: nowrap; width: 7.5rem; padding-right: 1rem; }
+.news-scroll { max-height: 12.5em; overflow-y: auto; }
+@media (max-width: 576px) {
+  h1 { font-size: 2.1rem; }
+  .news tr, .news th, .news td { display: block; }
+  .news th { width: auto; padding-bottom: 0; }
+  .news td { padding-top: 0; padding-bottom: 0.6rem; }
+  .news-scroll { max-height: 22em; }
+}
+
+/* Publications --------------------------------------------------------------- */
+.year { color: var(--muted); font-weight: 400; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+.pub { display: flex; gap: 1.5rem; padding: 1rem 0; }
+.pub-thumb { flex: 0 0 180px; }
+.pub-thumb video, .pub-thumb img {
+  display: block; width: 100%; height: auto; border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+.pub-body { flex: 1; min-width: 0; }
+.pub-title { font-size: 1rem; font-weight: 600; margin: 0 0 0.2rem; }
+.pub-authors, .pub-venue { font-size: 0.95rem; }
+.pub-links { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+.btn {
+  display: inline-block; font-size: 0.8rem; line-height: 1.4;
+  padding: 0.15rem 0.6rem; border: 1px solid var(--accent); border-radius: 3px;
+  color: var(--text); cursor: pointer; list-style: none;
+}
+.btn:hover { background: var(--accent); color: #fff; text-decoration: none; }
+summary.btn::-webkit-details-marker { display: none; }
+details.bibtex[open] { flex-basis: 100%; }
+details.bibtex pre {
+  background: var(--code-bg); border-radius: 4px; padding: 0.75rem; margin: 0.5rem 0 0;
+  font-size: 0.78rem; overflow-x: auto; white-space: pre;
+}
+@media (max-width: 576px) {
+  .pub { flex-direction: column; gap: 0.75rem; }
+  .pub-thumb { flex-basis: auto; max-width: 240px; }
+}
+
+/* Footer --------------------------------------------------------------------- */
+.site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; padding: 1.25rem 0; text-align: center; }
