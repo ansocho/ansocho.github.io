@@ -45,7 +45,7 @@ then set `preview: new.mp4`. (A plain `.png`/`.jpg`/`.gif` also works.)
 
 ## Update the CV
 
-Overwrite `assets/pdf/CV_2026_AS.pdf`. If you rename the file, update the path in `cv.html`.
+Overwrite `assets/pdf/CV_AS.pdf`. If you rename the file, update the path in `cv.html`.
 
 ## Run locally
 

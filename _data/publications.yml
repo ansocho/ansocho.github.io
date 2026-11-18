@@ -11,18 +11,18 @@
 
 - title: Optimal Transport Q-Learning for Flow Policy Steering and Acceleration
   authors: [Andreas Sochopoulos, Esmeralda S. Whitammer, Nikolaos Tsagkas, João Moura, Michael Gienger, Sethu Vijayakumar]
-  venue: arXiv preprint
+  venue: Conference on Robot Learning (CoRL), Austin, USA
   year: 2026
   selected: true
   preview: otql_thumbnail.mp4
   arxiv: "2607.06262"
   website: https://ansocho.github.io/otql-flow/
   bibtex: |
-    @article{sochopoulos2026otql,
-      title   = {Optimal Transport Q-Learning for Flow Policy Steering and Acceleration},
-      author  = {Sochopoulos, Andreas and Whitammer, Esmeralda S. and Tsagkas, Nikolaos and Moura, Jo{\~a}o and Gienger, Michael and Vijayakumar, Sethu},
-      journal = {arXiv preprint arXiv:2607.06262},
-      year    = {2026}
+    @inproceedings{sochopoulos2026otql,
+      title     = {Optimal Transport Q-Learning for Flow Policy Steering and Acceleration},
+      author    = {Sochopoulos, Andreas and Whitammer, Esmeralda S. and Tsagkas, Nikolaos and Moura, Jo{\~a}o and Gienger, Michael and Vijayakumar, Sethu},
+      booktitle = {Conference on Robot Learning (CoRL)},
+      year      = {2026}
     }
 
 - title: Decoupling the Declarative from the Procedural in Vision-Language-Action Models
